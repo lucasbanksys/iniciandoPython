@@ -1,0 +1,11 @@
+# for c in range(1,4):
+#     n = int(input("Digite zero para finalizar: "))
+# print(f"FIM {n}")
+
+resp = ''
+while resp != 'S':
+    nome = str(input("Digite seu nome: "))
+    resp = str(input("Voce quer finalizar? [S/N]").strip().upper()[0])
+print("Fim")
+    
+
