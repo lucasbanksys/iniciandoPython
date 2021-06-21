@@ -15,9 +15,6 @@ while parar != "S":
 
         jogada = input("\nEscolha sua jogada: P(PEDRA), (L)PAPEL, (T)TESOURA: ").upper().strip()
         
-        if jogada == "X":
-            break
-
         jogadaPC = randint(1,3)
 
         if jogadaPC == 1:
