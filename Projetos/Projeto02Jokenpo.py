@@ -9,8 +9,6 @@ print("Bem vindo ao JOGO JOKENPÔ\n")
 
 while parar != "S":
 
-    vitoriasUser = 0
-    vitoriasPC = 0
     qtdeRodadas = int(input("Quantas rodadas você deseja jogar? "))
 
     for i in range(qtdeRodadas):
