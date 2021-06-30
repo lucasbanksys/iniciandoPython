@@ -19,6 +19,8 @@ class Jogos:
                 print("CARA!") 
             else: 
                 print("COROA!")
+        elif self.escolhaJogo > 2 or self.escolhaJogo < 0:
+            print("Opção inválida. Digite 1, 2 ou 0 (zero): ")
 
 while escolha != 0:        
 
