@@ -1,8 +1,6 @@
 from random import randint
 from time import sleep
 
-escolha = 1
-
 class Jogos:
     def __init__(self, escolhaJogo):
         self.escolhaJogo = escolhaJogo
@@ -21,19 +19,3 @@ class Jogos:
                 print("COROA!")
         elif self.escolhaJogo > 2 or self.escolhaJogo < 0:
             print("Opção inválida. Digite 1, 2 ou 0 (zero): ")
-
-while escolha != 0:        
-
-    print('''
-    Você deseja:
-    1 - Jogar dados
-    2 - Jogar moedas
-    0 - Sair do jogo
-    ''')
-
-    escolha = Jogos(int(input("Sua opção: ")))
-
-    escolha.Jogar()
-
-    if escolha.escolhaJogo == 0:
-        break

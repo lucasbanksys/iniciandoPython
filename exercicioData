@@ -1,0 +1,22 @@
+def converterDia(data):
+    listaMeses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    dia, mes, ano = data.split('/')
+    # Verificando ano bissexto:
+    if (int(ano) % 4 == 0 and int(ano) % 100 != 0) or int(ano) % 400 == 0:
+        bissexto = True
+    else:
+        bissexto = False
+    # Colocando as condições de data inválida numa lista:
+    listaCondicoes = [int(dia) not in range(1, 32),
+                      int(mes) not in range(1, 13),
+                      int(mes) in [4, 6, 9, 11] and int(dia) > 30,
+                      bissexto == True and int(mes) == 2 and int(dia) > 29,
+                      bissexto == False and int(mes) == 2 and int(dia) > 28]
+    # Verificando as condições da lista. Utilizando o 'any', basta que uma das condições da lista seja satisfeita para que seja True:
+    if  any(listaCondicoes):
+        return 'A data não é válida.'
+    else:
+        return f'{dia} de {listaMeses[int(mes) - 1]} de {ano}'
+
+data = input('Entre com a data no formato DD/MM/AAAA: ')
+print(converterDia(data))
